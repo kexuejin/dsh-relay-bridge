@@ -28,7 +28,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
         # 版本不钉死：package.json 未声明 packageManager，交给 action 取最新 v10，
         # 锁文件由 pnpm 10 生成，兼容。
         with:
