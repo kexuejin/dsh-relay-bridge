@@ -34,7 +34,7 @@ jobs:
         with:
           version: 10
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           # 与 package.json engines 的低端一致（^22.19.0）。
           node-version: 22
