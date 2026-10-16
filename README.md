@@ -1,4 +1,4 @@
-# dsh-relay
+# dsh-relay-bridge
 
 [English](README.md) | [中文](README.zh.md)
 
@@ -22,31 +22,37 @@ By default no token is required (loopback is trusted). If you start agentNode wi
 
 ## Install
 
-As an installed bundle (the plugin builds itself on install, see the note below):
+### Option 1: Official npm Registry (Recommended)
 
 ```sh
-dsh plugin --profile web add github:kexuejin/dsh-relay
+dsh plugin --profile web add dsh-relay-bridge
+```
+
+### Option 2: As a Git Bundle (Builds on Install)
+
+```sh
+dsh plugin --profile web add github:kexuejin/dsh-relay-bridge
 ```
 
 pnpm refuses to run build scripts for git-hosted dependencies until you allow it, so the first `add` fails with `ERR_PNPM_GIT_DEP_PREPARE_NOT_ALLOWED`. Copy the exact key pnpm prints into your profile's `pnpm-workspace.yaml` and run `add` again:
 
 ```yaml
 allowBuilds:
-  dsh-relay@git+https://github.com/kexuejin/dsh-relay.git#<commit-sha>: true
+  dsh-relay-bridge@git+https://github.com/kexuejin/dsh-relay-bridge.git#<commit-sha>: true
 ```
 
 Treat that allowance as *permission for this package's code to run on your machine at install time*, outside any agent sandbox. Pin the commit (`#<sha>`) so a later push cannot silently change what gets executed.
 
-If you would rather not grant build permission, install a prebuilt form instead — an npm publication or a `pnpm pack` tarball:
+### Option 3: Prebuilt Tarball
 
 ```sh
-dsh plugin --profile web add ./dsh-relay-0.1.0.tgz
+dsh plugin --profile web add ./dsh-relay-bridge-0.1.0.tgz
 ```
 
 For development, link a checkout:
 
 ```sh
-dsh plugin --profile web add link:/path/to/dsh-relay
+dsh plugin --profile web add link:/path/to/dsh-relay-bridge
 ```
 
 ## Agent tools
