@@ -21,11 +21,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kexuejin/dsh-relay.git"
+    "url": "git+https://github.com/kexuejin/dsh-relay-bridge.git"
   },
-  "homepage": "https://github.com/kexuejin/dsh-relay#readme",
+  "homepage": "https://github.com/kexuejin/dsh-relay-bridge#readme",
   "bugs": {
-    "url": "https://github.com/kexuejin/dsh-relay/issues"
+    "url": "https://github.com/kexuejin/dsh-relay-bridge/issues"
   },
   "keywords": [
     "dsh-plugin",

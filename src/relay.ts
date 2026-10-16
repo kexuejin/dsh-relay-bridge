@@ -957,7 +957,7 @@ export class RelayClient {
     const token = await this.resolveToken()
     const headers: Record<string, string> = {
       accept: 'application/json',
-      'user-agent': 'dsh-relay/0.1.0',
+      'user-agent': 'dsh-relay-bridge/0.1.0',
       ...token === undefined ? {} : { authorization: `Bearer ${token}` },
       ...body === undefined ? {} : { 'content-type': 'application/json', 'content-length': String(Buffer.byteLength(body)) },
     }
