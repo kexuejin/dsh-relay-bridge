@@ -13,4 +13,4 @@
 # profile startup.
 - insert:
     - id: relay-pantry
-      name: dsh-relay
+      name: dsh-relay-bridge

@@ -11,7 +11,7 @@ import { basename, dirname, resolve as resolvePath, sep } from 'node:path'
 import { defineConfig } from 'tsdown'
 import { transform } from 'lightningcss'
 
-const id = 'dsh-relay'
+const id = 'dsh-relay-bridge'
 const CLIENT_EXTERNALS = [
   'react',
   'react/jsx-runtime',
